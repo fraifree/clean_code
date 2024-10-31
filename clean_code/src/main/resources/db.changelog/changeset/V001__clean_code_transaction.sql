@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS transaction
+(
+    id      BIGINT GENERATED ALWAYS AS IDENTITY UNIQUE PRIMARY KEY,
+    amount  DECIMAL(19, 2),
+    date    TIMESTAMP,
+    status  VARCHAR(64),
+    version BIGINT NOT NULL DEFAULT 0
+);
